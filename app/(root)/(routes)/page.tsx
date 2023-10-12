@@ -10,19 +10,14 @@ import { UserButton } from "@clerk/nextjs";
 const SetupPage = () => {
   const onOpen = useStoreModal((state) => state.onOpen);
   const isOpen = useStoreModal((state) => state.isOpen);
-  
+
   useEffect(() => {
-    if(!isOpen){
+    if (!isOpen) {
       onOpen();
     }
-  }, [isOpen, onOpen])
-  
-  return (
-    <div className='p-4'>
-     Root Page 
-     
-    </div>
-  )
-}
+  }, [isOpen, onOpen]);
+
+  return null;
+};
 
 export default SetupPage;
